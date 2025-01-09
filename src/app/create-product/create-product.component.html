@@ -1,0 +1,33 @@
+<div class="wrapper-cart">
+    <h1>Thêm sản phẩm mới</h1>
+
+    <div class="form-area" [formGroup]="product">
+        <div class="form-control">
+            <label for="name">Tên sản phẩm: </label>
+            <input type="text" id="name" formControlName="name">
+            <div *ngIf="name?.dirty || name?.touched">
+                <div style="color: red" *ngIf="name?.hasError('required')">
+                    Tên sản phẩm không được để trống
+                </div>
+            </div>
+        </div>     
+        <div class="form-control">
+            <label for="price">Giá sản phẩm: </label>
+            <input type="number" id="price" formControlName="price">
+            <div *ngIf="price?.dirty || price?.touched">
+                <div style="color: red" *ngIf="price?.hasError('required')">
+                    Giá sản phẩm không được để trống
+                </div>
+                <div style="color: red" *ngIf="price?.hasError('min')">
+                    Giá sản phẩm không được nhỏ hơn 0
+                </div>
+            </div>
+        </div>
+        <div class="form-control">
+            <div class="nav-btn" (click)="handleAddProduct()">
+                Thêm sản phẩm mới
+            </div>
+        </div>
+        
+    </div>
+</div>

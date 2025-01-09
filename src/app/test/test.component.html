@@ -1,0 +1,12 @@
+<div class="content">
+    <ul>
+        @for(user of usersList; track user.id) {
+            <li>
+                <p>Id: {{ user.id }}</p>
+                <p>Tên: {{ user.fullName }}</p>
+                <p>Email: {{ user.email }}</p>
+                <p>Status: {{ user.status }}</p>
+            </li>
+        }
+    </ul>
+</div>

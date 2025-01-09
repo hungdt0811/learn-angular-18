@@ -1,0 +1,44 @@
+h1 {
+    padding: 3rem;
+}
+
+.form-area {
+    border-radius: 5px;
+    background-color: #fff;
+    max-width: 500px;
+    padding: 1rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    .form-control {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        input {
+            all: unset;
+            height: 2rem;
+            padding: .3rem;
+            border-radius: 5px;
+            background-color: #e2e2e2;
+        }
+
+        .nav-btn {
+            background-image: linear-gradient(to right, #F0070C, #CC26D5, #7702FF);
+            padding: .5rem .3rem;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        @for(prod of products; track prod) {
+            <tr>
+                <td>{{ prod.id }}</td>
+                <td>
+                    <a [routerLink]="['/detail', prod.id]">
+                        <img src="{{ prod.image }}" alt="{{ prod.name }}">
+                    </a>         
+                </td>
+                <td>{{ prod.name | uppercasePipe }}</td>
+                <td>{{ prod.price | currencyPipe }}</td>
+                <td>
+                    <i class="fa-solid fa-trash" (click)="handleDelete(prod.id)"></i>
+                </td>
+            </tr>
+        }
+        Tổng giá : {{ totalPrice | currencyPipe }}
+    </tbody>
+</table>

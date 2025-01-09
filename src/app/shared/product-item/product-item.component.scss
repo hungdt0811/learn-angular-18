@@ -1,0 +1,34 @@
+table {
+    background-color: #fff;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem;
+    thead {
+        background-color: #bdbdbd;
+
+        th {
+            padding: .3rem;
+        }
+    }
+
+    tbody {
+        tr {               
+            td {
+                text-align: center; 
+                vertical-align: middle;
+                img {
+                    height: 60px;
+                }
+                i {
+                    cursor: pointer;
+                }
+            }
+            &:nth-child(odd) {
+                background-color: #f0efef;
+            }
+        }
+    }
+}
