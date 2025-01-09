@@ -17,7 +17,9 @@ export const routes: Routes = [
     {   
         path: "detail/:id", 
         loadComponent: () => 
-            import('./detail-product/detail-product.component').then((m) => m.DetailProductComponent)
+            import('./detail-product/detail-product.component').then((m) => m.DetailProductComponent),
+
+        
     },
     {
         path: "create", 
